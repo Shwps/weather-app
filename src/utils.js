@@ -1,8 +1,8 @@
 
 function convertor(value) {
     let kelvinDiff = 273.15;
-    let tempC = Math.round((value - kelvinDiff) * 100) / 100;
-    return tempC.toFixed(1);
+    let tempC = Math.round(value - kelvinDiff);
+    return tempC;
   }
 
   function time(value) {
@@ -19,6 +19,11 @@ function currentDateAndTime () {
   let t = setTimeout(function(){ currentDateAndTime()}, 1000)
 }
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 
 
-export {convertor, currentDateAndTime}
+
+
+export {convertor, currentDateAndTime, getRandomInt}

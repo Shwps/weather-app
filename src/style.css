@@ -10,27 +10,27 @@
   --light-3: #dee2e6;
   --light-4: #ced4da;
   --light-5: #adb5bd;
-  --transparent-1: #f8f9fa4f;
+  --transparent-1: #f8f9fa9f;
 }
 
 * {
   font-family: Phudu;
+  color: var(--dark-1);
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   background-color: var(--light-1);
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
   border-radius: 10px;
-  border: solid 4px var(--dark-2);
-  box-shadow: inset 2 4 6 8 var(--dark-2);
+  box-shadow: inset 1px 1px 10px var(--light-5);
   padding: 1em;
   background-color: var(--transparent-1);
 }
@@ -51,25 +51,28 @@ body {
 }
 
 .search-button {
-  color:var(--dark-2);
+  color: var(--dark-1);
   border: 0;
   border-bottom: 2px solid var(--dark-2);
   box-shadow: 0px 4px 4px -4px var(--dark-3);
   outline: inherit;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.3rem;
   background-color: transparent;
-  cursor:pointer;
-}
-
-.search-button:hover{
-  
+  cursor: pointer;
 }
 
 .temp {
-  font-size: 7em;
+  display: flex;
+}
+
+.temp-value {
+  font-size: 12em;
   font-weight: 400;
-  color: var(--dark-1);
+}
+
+.temp-container *:not(:first-child) {
+  font-size: 1.3rem;
 }
 
 .temp-container {
@@ -82,6 +85,7 @@ body {
 .info-container {
   display: flex;
   justify-content: space-evenly;
+  gap: 2rem;
 }
 
 .info-icon {
@@ -90,16 +94,21 @@ body {
 
 .info {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+.inner-info-con {
+  font-size: 2rem;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5em;
   margin: 4px;
 }
 
-.date {
-  color: var(--dark-3);
-}
+@media screen and (max-width: 1000px) {
 
-.place {
-  color:var(--dark-3)
 }

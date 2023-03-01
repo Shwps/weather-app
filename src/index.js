@@ -18,7 +18,7 @@ let humidityIcon = document.querySelector(".humidity-icon");
 humidityIcon.src = HumidityIcon;
 
 let windInfo = document.getElementById("wind-info");
-let tempElement = document.querySelector(".temp");
+let tempElement = document.querySelector(".temp-value");
 let placeElement = document.querySelector(".place");
 let humidityInfo = document.getElementById("humidity-info");
 let sunsetInfo = document.getElementById("sunset-info");
@@ -27,7 +27,6 @@ let searchForm = document.querySelector(".search-container");
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let input = document.querySelector(".search-input").value;
-  console.log(input);
   location = input;
   retreiveBackgroundPhoto(location);
   retreiveWeather(location).then(function (resp) {
@@ -47,8 +46,7 @@ async function retreiveBackgroundPhoto(location) {
   let url = `https://api.unsplash.com/search/photos?page=1&query=${location}&per_page=20&orientation=landscape&client_id=iOsuZCLmG8Lt_8vftPxYyzcKiHct_cTr4VYx9iKzAa4`;
   let response = await fetch(url);
   let obj = await response.json();
-  console.log(obj);
-  document.body.style.backgroundImage = `url(${obj.results[0].urls.full})`;
+  document.body.style.backgroundImage = `url(${obj.results[utils.getRandomInt(5)].urls.full})`;
 }
 retreiveBackgroundPhoto(location);
 
@@ -57,7 +55,7 @@ function displayWeather(weatherObj) {
   tempElement.textContent = utils.convertor(weatherObj.main.temp);
   placeElement.textContent = weatherObj.name;
   utils.currentDateAndTime();
-  windInfo.textContent = weatherObj.wind.speed;
+  windInfo.textContent = Math.round(weatherObj.wind.speed) + " m/s";
   humidityInfo.textContent = weatherObj.main.humidity + "%";
   let time = new Date(weatherObj.sys.sunset * 1000);
   let hours = time.getHours().toString();
