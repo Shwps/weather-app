@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --dark-1: #212429;
+  --dark-2: #343a40;
+  --dark-3: #495057;
+  --dark-4: #6c757d;
+  --light-1: #f8f9fa;
+  --light-2: #e9ecef;
+  --light-3: #dee2e6;
+  --light-4: #ced4da;
+  --light-5: #adb5bd;
+  --transparent-1: #f8f9fa4f;
+}
+
+* {
+  font-family: Phudu;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: var(--light-1);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.container {
+  border-radius: 10px;
+  border: solid 4px var(--dark-2);
+  box-shadow: inset 2 4 6 8 var(--dark-2);
+  padding: 1em;
+  background-color: var(--transparent-1);
+}
+
+.search-input {
+  width: 100%;
+  font-size: 1.3rem;
+  border: 0;
+  border-bottom: 2px solid var(--dark-2);
+  outline: 0;
+  box-shadow: 0px 4px 4px -4px var(--dark-3);
+  background-color: transparent;
+}
+
+.search-container {
+  display: flex;
+  gap: 0.5em;
+}
+
+.search-button {
+  color:var(--dark-2);
+  border: 0;
+  border-bottom: 2px solid var(--dark-2);
+  box-shadow: 0px 4px 4px -4px var(--dark-3);
+  outline: inherit;
+  font-weight: 600;
+  font-size: 24px;
+  background-color: transparent;
+  cursor:pointer;
+}
+
+.search-button:hover{
+  
+}
+
+.temp {
+  font-size: 7em;
+  font-weight: 400;
+  color: var(--dark-1);
+}
+
+.temp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.info-icon {
+  max-width: 2rem;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin: 4px;
+}
+
+.date {
+  color: var(--dark-3);
+}
+
+.place {
+  color:var(--dark-3)
+}

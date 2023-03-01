@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <script src="main.js"></script>
-</head>
-<body>
+    <script src="main.js" defer></script>
     
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="search-container">
+        <input type="text" class="search-input" placeholder="CITY" />
+        <button class="search-button">GO!</button>
+      </form>
+      <div class="temp-container">
+        <div class="temp"></div>
+        <div class="place"></div>
+        <div class="date"></div>
+      </div>
+      <div class="info-container">
+        <div class="info wind"><img src="" alt="" class="wind-icon info-icon"><span id="wind-info"></span></div>
+        <div class="info humidity"><img src="" alt="" class="humidity-icon info-icon"><span id="humidity-info"></span></div>
+        <div class="info sunset"><img src="" alt="" class="sunset-icon info-icon"><span id="sunset-info">d</span></div>
+      </div>
+    </div>
+  </body>
 </html>
