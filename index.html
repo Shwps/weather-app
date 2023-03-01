@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <script src="main.js" defer></script>
-    
   </head>
   <body>
     <div class="container">
@@ -15,14 +14,38 @@
         <button class="search-button">GO!</button>
       </form>
       <div class="temp-container">
-        <div class="temp"></div>
+        <div class="temp">
+          <span class="temp-value"></span>
+         <!-- <span class="unit">°C</span> -->
+        </div>
         <div class="place"></div>
         <div class="date"></div>
       </div>
       <div class="info-container">
-        <div class="info wind"><img src="" alt="" class="wind-icon info-icon"><span id="wind-info"></span></div>
-        <div class="info humidity"><img src="" alt="" class="humidity-icon info-icon"><span id="humidity-info"></span></div>
-        <div class="info sunset"><img src="" alt="" class="sunset-icon info-icon"><span id="sunset-info">d</span></div>
+        <div class="info wind">
+          <div class="inner-info-con">
+            <img src="" alt="" class="wind-icon info-icon" /><span
+              id="wind-info"
+            ></span>
+          </div>
+          <span>Wind Speed</span>
+        </div>
+        <div class="info humidity">
+          <div class="inner-info-con">
+            <img src="" alt="" class="humidity-icon info-icon" /><span
+              id="humidity-info"
+            ></span>
+          </div>
+          <span>Humidity</span>
+        </div>
+        <div class="info sunset">
+          <div class="inner-info-con">
+            <img src="" alt="" class="sunset-icon info-icon" /><span
+              id="sunset-info"
+            ></span>
+          </div>
+          <span>Sunset</span>
+        </div>
       </div>
     </div>
   </body>
